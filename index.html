@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire Club de Sport</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Formulaire Club de Sport</h1>
+
+        <!-- Section pour charger et gérer le fichier Excel -->
+        <input type="file" id="fileInput" />
+        <button id="loadFileButton">Charger le fichier Excel</button>
+
+        <form id="clubForm">
+            <label for="clubName">Nom du Club :</label>
+            <input type="text" id="clubName" placeholder="Entrez le nom du club" required>
+
+            <label for="coachName">Nom de l'Entraîneur :</label>
+            <select id="coachSelect" required>
+                <option value="">Choisir un entraîneur</option>
+            </select>
+
+            <label>Joueurs :</label>
+            <select id="playerSelect" required>
+                <option value="">Choisir un joueur</option>
+            </select>
+
+            <label for="exercise">Exercice effectué :</label>
+            <select id="exerciseSelect" required>
+                <option value="">Choisir un exercice</option>
+            </select>
+
+            <button type="button" id="addPlayer">Ajouter un joueur</button>
+            <button type="button" id="addClub">Ajouter un club</button>
+            <button type="button" id="addCoach">Ajouter un entraîneur</button>
+
+            <button type="button" id="exportExcel">Exporter en Excel</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
+</body>
+</html>
